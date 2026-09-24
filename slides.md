@@ -3,7 +3,7 @@ theme: seriph
 layout: cover
 class: text-center
 background: /images/PLACEHOLDER-capa.png
-title: Arranhando a Superfície de Ataque
+title: "Arranhando a Superfície de Ataque: Escopos Desconhecidos e os Novos Riscos Impulsionados pela IA"
 info: |
   ## Arranhando a Superfície de Ataque
   Escopos desconhecidos e os novos riscos impulsionados pela IA.
@@ -35,7 +35,7 @@ duration: 40min
 
 # O que é superfície de ataque
 
-Tudo que está exposto e pode ser alcançado por quem não é você.
+Tudo o que está exposto e pode ser alcançado por quem não é você.
 
 - Domínios, subdomínios, portas e serviços
 - APIs, rotas internas e endpoints esquecidos
@@ -113,9 +113,9 @@ layout: section
 
 - **Spear phishing** — e-mail direcionado com contexto real do alvo
 - **BEC / CEO fraud** — "sou eu, faz o pagamento, é urgente"
-- **Vishing** — ligação fingindo ser suporte/banco/chefe
+- **Vishing** — ligação se passando por suporte/banco/chefe
 - **Smishing / quishing** — SMS e QR code levando ao fluxo falso
-- Objetivo comum: credencial, MFA ou convencer alguém a agir
+- Objetivo comum: obter credencial, burlar o MFA ou convencer alguém a agir
 
 <div class="mt-8 p-4 border-2 border-dashed border-white/40 rounded text-center opacity-70">
   [placeholder] Colagem de 3 canais (e-mail, ligação, QR/SMS) convergindo para o mesmo objetivo: credencial
@@ -147,7 +147,7 @@ layout: section
 
 - Voice/video cloning a partir de poucos segundos de áudio/vídeo público
 - Arup (2024): deepfake do CFO em videochamada → ~US$25M
-- Spear phishing em escala: OSINT + LLM personaliza idioma, cargo e contexto
+- Spear phishing em escala: OSINT + LLM personalizam idioma, cargo e contexto
 - Callback phishing: e-mail leve + ligação clonada para "confirmar"
 
 <div class="mt-8 p-4 border-2 border-dashed border-white/40 rounded text-center opacity-70">
@@ -158,7 +158,7 @@ layout: section
 
 <!--
 - Clonagem de voz: ~3s de amostra já bastam em TTS moderno; a fonte é palestra, podcast ou saudação de voicemail.
-- Arup 2024: o funcionário viu e ouviu "o CFO" numa videochamada (deepfake de rosto); a empresa perdeu cerca de US$25M. O sinal que quebrou foi o pedido de mudar o número de callback.
+- Arup 2024: o funcionário viu e ouviu "o CFO" numa videochamada (deepfake de rosto); a empresa perdeu cerca de US$25M. O que denunciou o golpe foi o pedido de mudar o número de callback.
 - Escala: o LLM lê LinkedIn, commits públicos e o site da empresa e escreve no tom certo, sem os erros que denunciavam o phishing antigo.
 - Defesa: verificação fora de banda (canal/número conhecido), MFA resistente a phishing, desconfiar de urgência + mudança de dados bancários.
 -->
@@ -247,7 +247,7 @@ npm audit --production
 
 # Infra e containers
 
-- Imagem-base desatualizada / EOL acumulando CVE
+- Imagem-base desatualizada / EOL acumulando CVEs
 - Segredos em camadas: `ENV`, `ARG` e arquivos "deletados" continuam na história
 - K8s/IaC mal configurado: dashboard exposto, RBAC permissivo, S3 público
 - Segredo em `values.yaml` / `tfstate` commitado
@@ -325,7 +325,7 @@ gowitness scan file -f live.txt
 <!-- IMG: diagrama do pipeline subfinder → httpx → gowitness (entrada: domínio; saída: lista de hosts vivos com screenshots) -->
 
 <!--
-- Esse pipeline roda em minutos; a triagem visual do gowitness acha painel esquecido numa olhada.
+- Esse pipeline roda em minutos; a triagem visual do gowitness acha um painel esquecido numa olhada.
 - Só faça isso em escopo autorizado. Coleta passiva de dados públicos é diferente de scan agressivo.
 - Complementos: Amass para enumeração mais profunda e dnsx para resolução.
 -->
@@ -362,7 +362,7 @@ cert="alvo.com.br"
 <!-- IMG: prints/ícones de Shodan e FOFA lado a lado (opcional — manter os dois blocos de código como destaque) -->
 
 <!--
-- Shodan indexa banner de serviço; FOFA indexa HTML/ícone/cert — útil para fingerprint e para achar painel.
+- Shodan indexa banner de serviço; FOFA indexa HTML/ícone/cert — útil para fingerprint e para achar um painel.
 - O erro comum: banco ou dashboard sem auth só "escondido" atrás de porta alta. O scanner acha.
 - Defesa: não confie em obscuridade; use auth + rede privada e monitore exposição (ASM).
 - Layout `two-cols-header`: título no topo e colunas lado a lado.
@@ -378,7 +378,7 @@ image: /images/PLACEHOLDER-wayback-antes-depois.png
 Snapshots históricos de páginas, JS e respostas de API ficam arquivados.
 
 - Rota removida do front-end ≠ rota desligada no back-end
-- Endpoint antigo ainda autentica, ainda vaza dado
+- Endpoint antigo ainda autentica, ainda vaza dados
 - Cruze o passado com o presente:
 
 ```bash
